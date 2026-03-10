@@ -9,7 +9,7 @@ const getWompiPublicKey = (): string => {
 };
 
 const wompiApi = axios.create({
-  baseURL: import.meta.env.VITE_WOMPI_API_URL || 'https://sandbox.wompi.co/v1',
+  baseURL: import.meta.env.VITE_WOMPI_API_URL || 'https://api-sandbox.co.uat.wompi.dev/v1',
   headers: {
     'Content-Type': 'application/json',
     'Authorization': `Bearer ${getWompiPublicKey()}`,

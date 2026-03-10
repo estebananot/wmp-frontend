@@ -123,9 +123,29 @@ export const StatusPage: React.FC = () => {
         <div className="status-page">
           <div className="status-card status-card--processing">
             <div className="status-card__spinner" />
-            <h2 className="status-card__title">Procesando Pago</h2>
-            <p className="status-card__message">Tu transacción está siendo procesada. Por favor espera...</p>
-            <p className="status-card__id">ID: {id}</p>
+            <h2 className="status-card__title">⏳ Transacción en Proceso</h2>
+            <p className="status-card__message">
+              Tu pago está siendo verificado por Wompi. Esto puede tomar unos minutos.
+            </p>
+            <div className="status-card__info">
+              <p>
+                <strong>Estado actual:</strong> Pendiente de confirmación
+              </p>
+              <p>
+                <strong>ID de transacción:</strong> {id}
+              </p>
+              <p style={{ marginTop: '0.5rem', fontSize: '0.875rem' }}>
+                Te notificaremos cuando el pago sea confirmado.
+              </p>
+            </div>
+            <div className="status-card__actions">
+              <Button onClick={() => window.location.reload()} variant="primary">
+                🔄 Verificar estado
+              </Button>
+              <Button onClick={() => navigate('/history')} variant="secondary">
+                📋 Ver historial
+              </Button>
+            </div>
           </div>
         </div>
       </div>
