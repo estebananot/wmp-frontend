@@ -43,6 +43,31 @@ src/
 └── utils/                 # Utilidades
 ```
 
+## 📸 Screenshots
+
+<div align="center">
+
+### Vista General de la Aplicación
+![Overview](./docs/images/overview.png)
+*Página principal con catálogo de productos*
+
+### Flujo de Checkout
+
+| Paso | Descripción | Screenshot |
+|------|-------------|------------|
+| **Catálogo** | Grid de productos disponibles | ![No Product](./docs/images/NoProduct.png) |
+| **Confirmación** | Resumen antes de pagar | ![To Confirm](./docs/images/ToConfirm.png) |
+
+### Estados de Transacción
+
+| Estado | Descripción | Screenshot |
+|--------|-------------|------------|
+| **✅ Éxito** | Transacción aprobada | ![Success](./docs/images/SuccesTransaction.png) |
+| **❌ Error** | Error en el proceso | ![Error](./docs/images/Error1.png) |
+| **⚠️ Fallo** | Transacción rechazada | ![Fail](./docs/images/Fail.png) |
+
+</div>
+
 ## 🎨 Pantallas
 
 ### 1. Catálogo de Productos (`/`)
