@@ -86,6 +86,33 @@ src/
 - Detalles de la transacción
 - Animación de confetti en éxito 🎉
 
+## 💳 Tarjetas de Prueba (Wompi Staging)
+
+Para realizar pruebas en el ambiente de desarrollo, utiliza las siguientes tarjetas:
+
+### ✅ Tarjetas Aprobadas
+
+| Tipo | Número | CVV | Fecha | Nombre |
+|------|--------|-----|-------|--------|
+| **Visa** | 4242 4242 4242 4242 | 123 | 12/25 | Cualquiera |
+| **Mastercard** | 5555 5555 5555 4444 | 123 | 12/25 | Cualquiera |
+| **Amex** | 3782 822463 10005 | 1234 | 12/25 | Cualquiera |
+
+### ❌ Tarjetas Rechazadas
+
+| Tipo | Número | CVV | Fecha |
+|------|--------|-----|-------|
+| **Visa Declinada** | 4000 0000 0000 0002 | 123 | 12/25 |
+
+### 📋 Datos Adicionales
+
+- **Correo**: Cualquier email válido (ej: test@test.com)
+- **Nombre**: Cualquier nombre
+- **Dirección**: Cualquier dirección válida
+- **Teléfono**: +57 300 000 0000
+
+> **Nota**: Las transacciones pueden quedar en estado `PENDING` inicialmente y luego cambiar a `APPROVED` o `DECLINED` vía webhook.
+
 ## 🚀 Instalación
 
 ```bash
