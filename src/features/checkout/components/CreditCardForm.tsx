@@ -303,8 +303,8 @@ export const CreditCardForm: React.FC<CreditCardFormProps> = ({ onSubmit, onBack
       </div>
 
       <div className="credit-card-form__actions">
-        <button type="button" className="btn btn--secondary" onClick={onBack}>
-          Atrás
+          <button type="button" className="btn btn--secondary" onClick={onBack}>
+          ← Volver a datos de envío
         </button>
         <button type="submit" className="btn btn--success" disabled={loading}>
           {loading ? 'Procesando...' : 'Confirmar pago'}
