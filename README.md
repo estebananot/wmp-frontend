@@ -55,15 +55,15 @@ src/
 
 | Paso | Descripción | Screenshot |
 |------|-------------|------------|
-| **Catálogo** | Grid de productos disponibles | ![No Product](./docs/images/NoProduct.png) |
-| **Confirmación** | Resumen antes de pagar | ![To Confirm](./docs/images/ToConfirm.png) |
+| **Catálogo** | No disponible | ![No Product](./docs/images/NoProduct.png) |
+| **Confirmación** | Error | ![Error](./docs/images/Error1.png) |
 
 ### Estados de Transacción
 
 | Estado | Descripción | Screenshot |
 |--------|-------------|------------|
 | **✅ Éxito** | Transacción aprobada | ![Success](./docs/images/SuccesTransaction.png) |
-| **❌ Error** | Error en el proceso | ![Error](./docs/images/Error1.png) |
+| **⏱️Procesando** | Transacción en proceso | ![To Confirm](./docs/images/ToConfirm.png)  |
 | **⚠️ Fallo** | Transacción rechazada | ![Fail](./docs/images/Fail.png) |
 
 </div>
