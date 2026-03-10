@@ -49,15 +49,38 @@ export const HistoryPage: React.FC = () => {
   };
 
   const getStatusBadge = (status: string) => {
-    switch (status) {
+    const statusUpper = status?.toUpperCase();
+    switch (statusUpper) {
       case 'APPROVED':
         return <span className="history-badge history-badge--success">✓ Aprobado</span>;
       case 'DECLINED':
         return <span className="history-badge history-badge--error">✗ Rechazado</span>;
       case 'PENDING':
         return <span className="history-badge history-badge--pending">⏳ Pendiente</span>;
+      case 'ERROR':
+        return <span className="history-badge history-badge--error">⚠ Error</span>;
+      case 'VOIDED':
+        return <span className="history-badge history-badge--error">🚫 Anulado</span>;
       default:
-        return <span className="history-badge history-badge--error">Error</span>;
+        return <span className="history-badge history-badge--pending">⏳ {status || 'Desconocido'}</span>;
+    }
+  };
+
+  const getStatusMessage = (status: string) => {
+    const statusUpper = status?.toUpperCase();
+    switch (statusUpper) {
+      case 'APPROVED':
+        return 'Pago completado exitosamente';
+      case 'DECLINED':
+        return 'El pago fue rechazado por la entidad financiera';
+      case 'PENDING':
+        return 'Pago en proceso de verificación';
+      case 'ERROR':
+        return 'Ocurrió un error durante el procesamiento';
+      case 'VOIDED':
+        return 'La transacción fue anulada';
+      default:
+        return 'Estado desconocido';
     }
   };
 
@@ -117,6 +140,9 @@ export const HistoryPage: React.FC = () => {
                 <div className="history-item__body">
                   <span className="history-item__amount">{formatPrice(tx.totalAmount)}</span>
                   <span className="history-item__date">{formatDate(tx.createdAt)}</span>
+                </div>
+                <div className="history-item__message">
+                  <small>{getStatusMessage(tx.status)}</small>
                 </div>
                 <div className="history-item__arrow">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
